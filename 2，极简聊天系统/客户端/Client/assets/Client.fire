@@ -183,7 +183,7 @@
       "array": [
         0,
         0,
-        297.0349034347078,
+        248.54929088613392,
         0,
         0,
         0,
@@ -267,8 +267,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 160,
-      "height": 50.4
+      "width": 120,
+      "height": 37.8
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -321,8 +321,8 @@
     "_dstBlendFactor": 771,
     "_string": "接收消息",
     "_N$string": "接收消息",
-    "_fontSize": 40,
-    "_lineHeight": 40,
+    "_fontSize": 30,
+    "_lineHeight": 30,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -819,13 +819,13 @@
       "__id__": 2
     },
     "component": "",
-    "_componentId": "67169JTEBpDVarS3izRBtPp",
+    "_componentId": "b7bfcvgHZBH9qLMIrAcEaNA",
     "handler": "onTextChanged",
     "customEventData": ""
   },
   {
     "__type__": "cc.Node",
-    "_name": "button",
+    "_name": "button发送",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -887,7 +887,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "c5Tq9BKgZI8IXzSAvYpckE"
+    "_id": "0fHvBGhSFPPYLdfTXyN/+0"
   },
   {
     "__type__": "cc.Node",
@@ -956,7 +956,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "6bENjCr/NEyoWOcZG8jPFY"
+    "_id": "1cViuGnJVEDKo5/rn7gYi8"
   },
   {
     "__type__": "cc.Node",
@@ -1018,7 +1018,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "7fKjYshHBIK4uovqnyOSWz"
+    "_id": "adkyuot/VCz4E2TmlFAc9h"
   },
   {
     "__type__": "cc.Label",
@@ -1035,8 +1035,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "注册",
-    "_N$string": "注册",
+    "_string": "发送",
+    "_N$string": "发送",
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -1051,7 +1051,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
     "_N$cacheMode": 1,
-    "_id": "d69JIm3QNLYoJiy8YlskYq"
+    "_id": "d82qkk3U5HeorZiUDZgrGS"
   },
   {
     "__type__": "cc.Sprite",
@@ -1083,7 +1083,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "96/HPml0RKno7E4tqF0ENf"
+    "_id": "54f0KbGmNI54brrxxTe51H"
   },
   {
     "__type__": "cc.Widget",
@@ -1110,7 +1110,7 @@
     "_isAbsVerticalCenter": true,
     "_originalWidth": 100,
     "_originalHeight": 40,
-    "_id": "e09jLDLAtBybP4QkE4g6vm"
+    "_id": "e6V/C+JFFCsqiWqH/JiocF"
   },
   {
     "__type__": "cc.Button",
@@ -1196,7 +1196,7 @@
     "_N$target": {
       "__id__": 20
     },
-    "_id": "9fvL8gu/ROebtKuHbMGzY4"
+    "_id": "7abTMYBHFMDroxo9qZ/k1x"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -1204,13 +1204,13 @@
       "__id__": 2
     },
     "component": "",
-    "_componentId": "67169JTEBpDVarS3izRBtPp",
-    "handler": "register",
+    "_componentId": "b7bfcvgHZBH9qLMIrAcEaNA",
+    "handler": "sendMessage",
     "customEventData": ""
   },
   {
     "__type__": "cc.Node",
-    "_name": "button",
+    "_name": "button注册",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -1220,7 +1220,7 @@
         "__id__": 28
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 33
@@ -1272,7 +1272,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "0fHvBGhSFPPYLdfTXyN/+0"
+    "_id": "c5Tq9BKgZI8IXzSAvYpckE"
   },
   {
     "__type__": "cc.Node",
@@ -1341,7 +1341,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "1cViuGnJVEDKo5/rn7gYi8"
+    "_id": "6bENjCr/NEyoWOcZG8jPFY"
   },
   {
     "__type__": "cc.Node",
@@ -1403,7 +1403,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "adkyuot/VCz4E2TmlFAc9h"
+    "_id": "7fKjYshHBIK4uovqnyOSWz"
   },
   {
     "__type__": "cc.Label",
@@ -1420,8 +1420,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "发送",
-    "_N$string": "发送",
+    "_string": "注册",
+    "_N$string": "注册",
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -1436,7 +1436,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
     "_N$cacheMode": 1,
-    "_id": "d82qkk3U5HeorZiUDZgrGS"
+    "_id": "d69JIm3QNLYoJiy8YlskYq"
   },
   {
     "__type__": "cc.Sprite",
@@ -1468,7 +1468,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "54f0KbGmNI54brrxxTe51H"
+    "_id": "96/HPml0RKno7E4tqF0ENf"
   },
   {
     "__type__": "cc.Widget",
@@ -1495,7 +1495,7 @@
     "_isAbsVerticalCenter": true,
     "_originalWidth": 100,
     "_originalHeight": 40,
-    "_id": "e6V/C+JFFCsqiWqH/JiocF"
+    "_id": "e09jLDLAtBybP4QkE4g6vm"
   },
   {
     "__type__": "cc.Button",
@@ -1581,7 +1581,7 @@
     "_N$target": {
       "__id__": 28
     },
-    "_id": "7abTMYBHFMDroxo9qZ/k1x"
+    "_id": "9fvL8gu/ROebtKuHbMGzY4"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -1589,8 +1589,8 @@
       "__id__": 2
     },
     "component": "",
-    "_componentId": "67169JTEBpDVarS3izRBtPp",
-    "handler": "sendMessage",
+    "_componentId": "b7bfcvgHZBH9qLMIrAcEaNA",
+    "handler": "register",
     "customEventData": ""
   },
   {
@@ -1638,7 +1638,7 @@
     "_id": "29zXboiXFBKoIV4PQ2liTe"
   },
   {
-    "__type__": "67169JTEBpDVarS3izRBtPp",
+    "__type__": "b7bfcvgHZBH9qLMIrAcEaNA",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1648,14 +1648,6 @@
     "messageLabel": {
       "__id__": 6
     },
-    "registerButton": {
-      "__id__": 19
-    },
-    "sendButton": {
-      "__id__": 27
-    },
-    "clientName": "",
-    "message": "",
-    "_id": "cbjTVHrMpJeKofZBt5h9K1"
+    "_id": "909HYPnWxLxITetjk0CJAV"
   }
 ]

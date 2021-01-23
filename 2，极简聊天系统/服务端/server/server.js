@@ -1,33 +1,34 @@
-//引入websocket模块
-let ws = require("nodejs-websocket");
+var ws = require("nodejs-websocket");
+
 
 let client1 = null;
 let client2 = null;
 
-//启动websocket服务器
-let server = ws.createServer(function (connect) {
+var server = ws.createServer(function (connect) 
+{
+    connect.on("text", function (data) {
+        console.log('收到消息=',data)
 
-    connect.on('text', function (result) {
+        let json=JSON.parse(data);
 
-        let json=JSON.parse(result);
-
-        console.log('接收消息', json)
+        let name =  json.name;
+        let message =  json.message;
 
         //注册
-        if(json.message == 'login')
+        if(message == 'login')
         {
-            if(json.name == 'client1'){
+            if(name == 'client1'){
                 client1 = connect;
                 console.log('client1注册成功！')
             }
-            else  if(json.name == 'client2'){
+            else  if(name == 'client2'){
                 client2 = connect;
                 console.log('client2注册成功！')
             } 
 
             return;
         }
-
+        
         if(json.name == 'client1'){
 
             let data = {};
@@ -44,17 +45,9 @@ let server = ws.createServer(function (connect) {
     
             let jsonStr=JSON.stringify(data);
             client1.sendText(jsonStr);
-        }  
-
+        } 
     })
-
-    connect.on('close', function (code) {
-        console.log('关闭连接', code)
-    })
-
-    connect.on('error', function (code) {
-        console.log('异常关闭', code)
-    })
-//设置端口号为3000
+    connect.on("close", function (code, reason) {});
+    connect.on("error", function (code, reason) {});
 }).listen(3000)
-console.log('websocket服务端启动') 
+console.log('websocket服务端启动')

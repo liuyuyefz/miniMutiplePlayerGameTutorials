@@ -3,15 +3,13 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-       messageLabel:cc.Label,
-       registerButton:cc.Node,
-       sendButton:cc.Node,
-
-       clientName:'',
-       message:''
+        messageLabel:cc.Label
     },
     start () {
         let Self = this;
+        this.message = '';
+        this.clientName = '';
+        this.bRegistered = false;
 
         this.ws = new WebSocket("ws://127.0.0.1:3000");
         this.ws.onopen = function (event) {
@@ -21,10 +19,13 @@ cc.Class({
         this.ws.onmessage = function (event) {
             console.log("接收服务端信息: " + event.data);
 
-            let jsonObj = JSON.parse(event.data);
-            let name = jsonObj.name;
-            let message = jsonObj.message;
-            Self.messageLabel.string = name+'发来消息：'+message;
+            let json=JSON.parse(event.data);//json字符串转对象
+            let name =  json.name;
+            let message =  json.message;
+            //拼接最终显示字符串
+            let str = name+'发来：'+message;
+            //给label赋值
+            Self.messageLabel.string = str;
         };
 
         this.ws.onerror = function (event) {
@@ -34,30 +35,35 @@ cc.Class({
         this.ws.onclose = function (event) {
             console.log("断开连接");
         };
+
     },
     onTextChanged: function(text, editbox, customEventData) {
 
-        if(this.registerButton.active == true)
+        console.log("文本变化",text);
+        if(!this.bRegistered)
         {
             this.clientName = text;
         }
-
-        this.message = text; 
+        else
+        {
+            this.message = text;
+        }   
     },
-    register(){
-
+    register(event, customEventData){
+        //组装消息
         let data = {};
         data.name = this.clientName;
         data.message = 'login';
-
+        //转化为字符串发送
         let jsonStr=JSON.stringify(data);
-
+        //发送
         this.ws.send(jsonStr);
 
-        this.registerButton.active = false;
-        this.sendButton.active = true;
+        this.bRegistered = true;
+        let button = event.target;
+        button.destroy(); 
     },
-    sendMessage(){
+    sendMessage(event, customEventData){
 
         let data = {};
         data.name = this.clientName;
