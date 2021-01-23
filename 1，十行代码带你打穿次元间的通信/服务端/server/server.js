@@ -4,6 +4,7 @@ var ws = require("nodejs-websocket");
 var server = ws.createServer(function (connect) {
     connect.on('text', function (result) {
         console.log('接收消息', result)
+        connect.sendText('欢迎光临')
     })
     connect.on('close', function (code) {
         console.log('关闭连接', code)
