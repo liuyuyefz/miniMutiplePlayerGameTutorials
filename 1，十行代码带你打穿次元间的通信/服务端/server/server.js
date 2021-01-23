@@ -1,18 +1,18 @@
 //引入websocket模块
 var ws = require("nodejs-websocket");
 //启动websocket服务器
-var server = ws.createServer(function (connection) {
+var server = ws.createServer(function (connect) {
 
-    connection.on('connect', function (code) {
+    connect.on('connect', function (code) {
         console.log('有客户端连接', code)
     })
-    connection.on('text', function (result) {
+    connect.on('text', function (result) {
         console.log('接收消息', result)
     })
-    connection.on('close', function (code) {
+    connect.on('close', function (code) {
         console.log('关闭连接', code)
     })
-    connection.on('error', function (code) {
+    connect.on('error', function (code) {
         console.log('异常关闭', code)
     })
 //设置端口号为3000
