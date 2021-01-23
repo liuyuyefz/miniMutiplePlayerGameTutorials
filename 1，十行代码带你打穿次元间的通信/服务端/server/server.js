@@ -2,10 +2,6 @@
 var ws = require("nodejs-websocket");
 //启动websocket服务器
 var server = ws.createServer(function (connect) {
-
-    connect.on('connect', function (code) {
-        console.log('有客户端连接', code)
-    })
     connect.on('text', function (result) {
         console.log('接收消息', result)
     })
